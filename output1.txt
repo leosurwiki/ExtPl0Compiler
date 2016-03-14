@@ -1,0 +1,84 @@
+sequence of quartral_elements is above:
+------------FUN 52  program-------
+------------CREATE footarray  12-------
+------------CREATE headarray  12-------
+------------CREATE i  4-------
+------------CREATE foot  4-------
+------------CREATE head  4-------
+------------BR   l@5-------
+------------LABEL   l@0-------
+------------FUN 56  calculation-------
+------------CREATE calculation:foot  4-------
+------------TAR   calculation:foot-------
+------------CREATE calculation:head  4-------
+------------TAR   calculation:head-------
+------------CREATE calculation:bu  4-------
+------------CREATE calculation:rabbit  4-------
+------------CREATE calculation:cock  4-------
+------------CREATE calculation:n  4-------
+------------BR   l@1-------
+------------LABEL   l@1-------
+------------ADD i@0 i@0 calculation:n-------
+------------ADDi i@1 i@-1 t@1-------
+------------ADD t@1 i@0 calculation:cock-------
+------------LABEL   l@2-------
+------------ADDi calculation:cock i@1 t@2-------
+------------ADD t@2 i@0 calculation:cock-------
+------------SUB calculation:head calculation:cock t@
+------------ADD t@3 i@0 calculation:rabbit-------
+------------SUB calculation:head calculation:cock t@
+------------ADD t@4 i@0 calculation:bu-------
+------------MUL calculation:cock i@2 t@5-------
+------------MUL calculation:rabbit i@4 t@6-------
+------------ADD t@5 t@6 t@7-------
+------------BRNEQ t@7 calculation:foot l@3-------
+------------WRITE " cocks: "  str-------
+------------WRITE calculation:cock  expre-------
+------------WRITE " rabbits: "  str-------
+------------WRITE calculation:rabbit  expre-------
+------------WRITE " bu: "  str-------
+------------WRITE calculation:bu  expre-------
+------------ADD calculation:n i@1 t@9-------
+------------ADD t@9 i@0 calculation:n-------
+------------LABEL   l@3-------
+------------BRNEQ calculation:cock calculation:head
+------------BRNEQ calculation:n i@0 l@4-------
+------------WRITE " cocks: "  str-------
+------------WRITE i@0  expre-------
+------------WRITE " rabbits: "  str-------
+------------WRITE i@0  expre-------
+------------LABEL   l@4-------
+------------PAR   calculation:head-------
+------------PAR   calculation:foot-------
+------------RETURN   -------
+------------LABEL   l@5-------
+------------ADDi i@0 i@-1 t@11-------
+------------ADD t@11 i@0 i-------
+------------LABEL   l@6-------
+------------ADDi i i@1 t@12-------
+------------ADD t@12 i@0 i-------
+------------BRNEQ i i@0 l@7-------
+------------ADD i@4 i@0 head-------
+------------ADD i@8 i@0 foot-------
+------------LABEL   l@7-------
+------------BRNEQ i i@1 l@8-------
+------------ADD i@8 i@0 head-------
+------------ADD i@4 i@0 foot-------
+------------LABEL   l@8-------
+------------BRNEQ i i@2 l@9-------
+------------ADD i@3 i@0 head-------
+------------ADD i@5 i@0 foot-------
+------------LABEL   l@9-------
+------------ADDRSHIFTarc i head headarray-------
+------------ADDRSHIFTarc i foot footarray-------
+------------ADDRSHIFT i t@18 headarray-------
+------------PAR   t@18-------
+------------ADDRSHIFT i t@19 footarray-------
+------------PAR   t@19-------
+------------CALL 0 0 -------
+------------TAR   t@19-------
+------------TAR   t@18-------
+------------ADDRSHIFTarc i t@18 headarray-------
+------------ADDRSHIFTarc i t@19 footarray-------
+------------BRNEQ i i@2 l@6-------
+------------RETURN   -------

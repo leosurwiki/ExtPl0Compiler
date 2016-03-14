@@ -1,0 +1,34 @@
+var
+b,a:array[4]of integer;
+i,n:integer;
+procedure qs(l,r:integer);
+var
+i,j,t,x:integer;
+begin
+x:=a[(r+l)/ 2];
+i:=l;j:=r;
+while i<=j do begin
+   while a[i]<x do i:=i+1;
+   while a[j]>x do j:=j-1;
+   if i<=j then begin
+     t:=a[i];a[i]:=a[j];a[j]:=t;
+     i:=i+1;
+     j:=j-1;
+   end;
+end;
+if i<r then qs(i,r);
+if j>l then qs(l,j);
+end;
+begin
+    n:=3;
+    a[1]:=2;a[2]:=3;a[3]:=1;
+    qs(1,n);
+    for i:=1 to n do b[i]:=1;
+    for i:=1 to n-1 do begin
+      if a[i]=a[i+1] then begin
+        b[i+1]:=b[i]+b[i+1];
+        b[i]:=0;
+      end;
+    end;
+    for i:=1 to n do write(a[i]);
+end.

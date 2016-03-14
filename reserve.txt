@@ -1,0 +1,17 @@
+array
+begin
+const
+do
+downto
+end
+for
+function
+if
+of
+procedure
+read
+then
+to
+var
+while
+write
